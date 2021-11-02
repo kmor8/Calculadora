@@ -114,7 +114,30 @@ public class FXMLDocumentController implements Initializable {
             display.setText(display.getText() + "9");
         } else if (event.getSource() == zero) {
             display.setText(display.getText() + "0");
-        } else if (event.getSource() == clear) {
+        } else if(event.getSource() ==coma)
+        {
+        	display.setText(display.getText()+".");
+        } else if (event.getSource() == back) {
+        		String str = display.getText();
+        		if(str.length()==1)
+        		{
+        			display.setText("");
+        		}
+        		else if(checkP(str))
+        		{	
+        			display.setText(str.substring(0, str.length()-2));
+        		}else
+        		{
+        			display.setText(str.substring(0, str.length()-1));
+        		}
+        		
+            
+        }
+        else if(event.getSource() ==signo)
+        {
+        	display.setText("-"+display.getText());
+        }
+        else if (event.getSource() == clear) {
             display.setText("");
         }
         else if (event.getSource() == plus) {
@@ -206,12 +229,23 @@ public class FXMLDocumentController implements Initializable {
                     display.setText(String.valueOf(ans));
                 	System.out.println("logaritmo");break;	
                 
-                	
-                    
+                
             }
         }
     }
     
+    public boolean checkP (String str)
+    {
+    	
+    	String temp=str;
+    	char otro=temp.toCharArray()[str.length()-2];
+    	if(otro=='.')
+    			{
+    	return true;
+    			}
+		return false;
+    	
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
