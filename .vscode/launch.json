@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Calculadora_58a3fc49"
+        },
+        {
+            "type": "java",
+            "name": "Launch calculadoraVista",
+            "request": "launch",
+            "mainClass": "calculatorgui.calculadoraVista",
+            "projectName": "Calculadora_58a3fc49"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "vmArgs": "--module-path C:\\Program Files\\Java\\javafx-sdk-11\\lib --add-modules=javafx.controls,javafx.fxml",
+            "mainClass": "${file}",
+        }
+    ]
+    
+}
