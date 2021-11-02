@@ -133,6 +133,31 @@ public class FXMLDocumentController implements Initializable {
             data = Float.parseFloat(display.getText());
             operation = 4; //Division
             display.setText("");
+        } 
+        else if (event.getSource() == mod) {
+            data = Float.parseFloat(display.getText());
+            operation = 5; //Mod
+            display.setText("");
+        } 
+        else if (event.getSource() == tenPow) {
+            data = Float.parseFloat(display.getText());
+            operation = 6; //tenPow
+            display.setText("");
+        } 
+        else if (event.getSource() == sqrt) {
+            data = Float.parseFloat(display.getText());
+            operation = 7; //raiz Cuadrada
+            display.setText("");
+        } 
+        else if (event.getSource() == nFact) {
+            data = Float.parseFloat(display.getText());
+            operation = 8; //nFact
+            display.setText("");
+        } 
+        else if (event.getSource() == log) {
+            data = Float.parseFloat(display.getText());
+            operation = 9; //nFact
+            display.setText("");
         }
         else if (event.getSource() == equals) {
             float secondOperand = Float.parseFloat(display.getText());
@@ -150,6 +175,39 @@ public class FXMLDocumentController implements Initializable {
                     ans = 0f;
                     ans = calculadoraPrincipal.div(data, secondOperand);                    
                     display.setText(String.valueOf(ans));break;
+                case 5: //Mod
+                    ans = 0f;
+                    ans = calculadoraPrincipal.mod(data, secondOperand);                    
+                    display.setText(String.valueOf(ans));
+                	System.out.println("mod");break;
+                	
+                case 6: //10 elevado a una potencia
+                    ans = 0f;
+                    ans = calculadoraPrincipal.tenPow(secondOperand);                    
+                    display.setText(String.valueOf(ans));
+                	System.out.println("10 elevado a una potencia");break;
+                
+                case 7: //raiz cuadrada
+                    ans = 0f;
+                    ans = calculadoraPrincipal.sqrt(secondOperand);                    
+                    display.setText(String.valueOf(ans));
+                	System.out.println("raiz cuadrada");break;
+                	
+                case 8: //factorial
+                    ans = 0f;
+                    ans = calculadoraPrincipal.nFact(secondOperand);                    
+                    display.setText(String.valueOf(ans));
+                	System.out.println("factorial");break;	
+                	
+                case 9: //logaritmo
+                    ans = 0f;
+                    //log(base,num);
+                    ans = calculadoraPrincipal.log(data, secondOperand);                    
+                    display.setText(String.valueOf(ans));
+                	System.out.println("logaritmo");break;	
+                
+                	
+                    
             }
         }
     }

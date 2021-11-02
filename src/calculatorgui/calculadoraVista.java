@@ -16,7 +16,7 @@ public void start(Stage primaryStage) throws Exception
 {
     Parent root= FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
     primaryStage.setTitle("Calculadora");
-    primaryStage.setScene(new Scene (root,300,275));
+    primaryStage.setScene(new Scene (root,610,355));
     primaryStage.show();
 }
     
