@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 import java.math.BigDecimal;
 public class TestJUnit {
    
-	@Test
+@Test
    public void testSetup() {
       String str= "I am done with Junit setup";
       assertEquals("I am done with Junit setup",str);
@@ -506,14 +506,5 @@ public class TestJUnit {
        assertEquals(expResult,result,0.0);
    }
 
-
-  
-
- 
-
-  
-   
-   
-   
 
 }
