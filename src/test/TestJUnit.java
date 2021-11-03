@@ -13,11 +13,11 @@ import static org.junit.Assert.assertEquals;
 import java.math.BigDecimal;
 public class TestJUnit {
    
-	/*@Test
+	@Test
    public void testSetup() {
       String str= "I am done with Junit setup";
       assertEquals("I am done with Junit setup",str);
-   }*/
+   }
    
    
    @BeforeClass
@@ -441,6 +441,24 @@ public class TestJUnit {
     
       }
     
+      @Test
+      public void testFact4() {
+          float b = 3F;
+          float expResult = 6F;
+          float result = calculadoraPrincipal.nFact(b);
+          assertEquals(expResult, result, 0.0);
+    
+      }
+      
+      
+      @Test
+      public void testFact5() {
+          float b = 0F;
+          float expResult = 1F;
+          float result = calculadoraPrincipal.nFact(b);
+          assertEquals(expResult, result, 0.0);
+      }
+      
    // Test Log
       @Test
       public void testLog1(){
